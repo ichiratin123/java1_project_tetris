@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="968.0" prefWidth="877.0" xmlns:fx="http://javafx.com/fxml" fx:controller="application.GameController">
+   <children>
+      <Canvas fx:id="canvas" height="900.0" layoutX="14.0" layoutY="14.0" width="500.0" />
+   </children>
+</Pane>
