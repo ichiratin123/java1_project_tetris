@@ -1,10 +1,12 @@
 package application;
 import javafx.animation.PauseTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,6 +18,8 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class GameController {
     @FXML
@@ -31,8 +35,27 @@ public class GameController {
     private Stage stage;
     @FXML
     private ImageView nextMino;
+    
+    @FXML
+    private Button btnEn;
+    @FXML
+    private Button btnVi;
+    @FXML
+    private Button btnCz;
+    
+    @FXML
+    private Label gameScore;
+    @FXML
+    private Label gameLevel;
+    @FXML
+    private Label gameNext;
+    @FXML
+    private Label backLB;
+    
+    
 
     public void startGame(){
+    	updateTexts(SettingLanguages.getCurrentLocale());
         this.tetris = new Tetris(canvas.getWidth(), canvas.getHeight());
         this.tetris.setGameListener(new GameListenerImpl());
         setupKeyListeners();
@@ -46,7 +69,8 @@ public class GameController {
         });
     }
 
-    private void handleKeyPressed(KeyEvent event) {
+    @SuppressWarnings("incomplete-switch")
+	private void handleKeyPressed(KeyEvent event) {
         if (tetris != null) {
             switch (event.getCode()) {
                 case LEFT:
@@ -139,5 +163,13 @@ public class GameController {
         stage.resizableProperty().set(false);
         stage.setTitle("Tetris");
         stage.show();
+    }
+    
+    private void updateTexts(Locale locale) {
+        ResourceBundle texts = ResourceBundle.getBundle("texts", locale);
+        gameScore.setText(texts.getString("gameScore"));
+        gameLevel.setText(texts.getString("gameLevel"));
+        gameNext.setText(texts.getString("gameNext"));
+        backLB.setText(texts.getString("backLB"));
     }
 }

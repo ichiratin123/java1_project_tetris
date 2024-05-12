@@ -9,7 +9,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1025.0" prefWidth="873.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
    <children>
       <Canvas fx:id="canvas" height="1000.0" layoutX="14.0" layoutY="13.0" width="500.0" />
-      <Label layoutX="553.0" layoutY="46.0" prefHeight="61.0" prefWidth="107.0" text="SCORE:" textFill="#c9c9c9">
+      <Label fx:id="gameScore" layoutX="553.0" layoutY="46.0" prefHeight="61.0" prefWidth="107.0" text="SCORE:" textFill="#c9c9c9">
          <font>
             <Font name="Comic Sans MS" size="27.0" />
          </font>
@@ -18,7 +18,7 @@
          <font>
             <Font name="Comic Sans MS" size="27.0" />
          </font></Label>
-      <Label layoutX="562.0" layoutY="130.0" text="LEVEL:" textFill="#c9c9c9">
+      <Label fx:id="gameLevel" layoutX="562.0" layoutY="130.0" text="LEVEL:" textFill="#c9c9c9">
          <font>
             <Font name="Comic Sans MS" size="27.0" />
          </font>
@@ -27,13 +27,13 @@
          <font>
             <Font name="Comic Sans MS" size="27.0" />
          </font></Label>
-      <Label fx:id="backLB" layoutX="773.0" layoutY="948.0" onMouseClicked="#switchBackStartView" text="BACK" textFill="#c9c9c9">
+      <Label fx:id="backLB" layoutX="705.0" layoutY="948.0" onMouseClicked="#switchBackStartView" text="BACK" textFill="#c9c9c9">
          <font>
             <Font name="Comic Sans MS" size="27.0" />
          </font>
       </Label>
       <ImageView fx:id="nextMino" fitHeight="239.0" fitWidth="200.0" layoutX="575.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="562.0" layoutY="357.0" text="NEXT:" textFill="#c9c9c9">
+      <Label fx:id="gameNext" layoutX="562.0" layoutY="357.0" text="NEXT:" textFill="#c9c9c9">
          <font>
             <Font name="Comic Sans MS" size="27.0" />
          </font>

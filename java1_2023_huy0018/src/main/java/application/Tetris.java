@@ -5,7 +5,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import java.util.ArrayList;
 import java.util.List;
-
 public class Tetris implements DrawableSimulable{
     public static final int SIZE = 50; // block size
     private double width;
@@ -20,6 +19,8 @@ public class Tetris implements DrawableSimulable{
     private GameListener gameListener = new EmptyGameListener();
     private Level level;
     private boolean changeImage = false;
+    
+    
 
 
     public Tetris(double width, double height) {
@@ -30,6 +31,10 @@ public class Tetris implements DrawableSimulable{
         mino = randomMino.createRandomMino(level.getCurrentDropSpeed());
         mino.setPosition(XMAX / 2 - mino.getSize(), 0);
         this.score = 0;
+        
+        
+        
+        
     }
 
     public void draw(GraphicsContext gc) {
@@ -52,10 +57,19 @@ public class Tetris implements DrawableSimulable{
             Font font = new Font("Comic Sans MS", 50);
             gc.setFont(font);
             gc.setFill(Color.BLACK);
-            gc.fillText("GAME OVER", (XMAX/2) - 150, YMAX/2);
+            if(SettingLanguages.getCurrentLocale().toString().equals("en_US")) {
+            	gc.fillText("GAME OVER", (XMAX/2) - 150, YMAX/2);
+            }else if(SettingLanguages.getCurrentLocale().toString().equals("en")) {
+            	gc.fillText("GAME OVER", (XMAX/2) - 150, YMAX/2);
+            }else if(SettingLanguages.getCurrentLocale().toString().equals("vi_VN")){
+            	gc.fillText("KET THUC", (XMAX/2) - 150, YMAX/2);
+            }else {
+            	gc.fillText("KONEC HRY", (XMAX/2) - 150, YMAX/2);
+            }
+            
         }
     }
-
+    
     @Override
     public void simulate(double deltaT) {
         mino.simulate(deltaT);
@@ -194,7 +208,7 @@ public class Tetris implements DrawableSimulable{
         return false;
     }
 
-    public void setGameListener(GameListener gameListenerImpl) {
+    public void setGameListener(@SuppressWarnings("exports") GameListener gameListenerImpl) {
         this.gameListener = gameListenerImpl;
 
     }
@@ -219,6 +233,7 @@ public class Tetris implements DrawableSimulable{
         }
         return false;
     }
+    
 
 }
 

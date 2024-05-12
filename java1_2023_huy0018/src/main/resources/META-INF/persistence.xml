@@ -1,0 +1,24 @@
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <persistence-unit name="java2" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- <class>application.Score</class> -->
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:file:./db/java2" />
+            
+            <property name="jakarta.persistence.jdbc.user" value="app"/>
+            <property name="jakarta.persistence.jdbc.password" value="app"/>	
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"></property>
+            
+            
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            
+            
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -5,9 +5,10 @@ E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\S
 E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\App.java
 E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\Score.java
 E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\MinoRandom.java
-E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\module-info.java
+E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\Player.java
 E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\ScoreComparator.java
 E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\GameController.java
+E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\SettingLanguages.java
 E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\EmptyGameListener.java
 E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\DrawingThread.java
 E:\code\java\java1_project_tetris\java1_2023_huy0018\src\main\java\application\Mino.java

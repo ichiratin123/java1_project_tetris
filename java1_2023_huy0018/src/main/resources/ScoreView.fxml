@@ -9,7 +9,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ScoreBoard">
    <children>
       <ListView fx:id="scoreView" layoutX="15.0" layoutY="153.0" prefHeight="495.0" prefWidth="771.0" />
-      <Label layoutX="234.0" layoutY="37.0" text="HIGH SCORE" textFill="#c9c9c9">
+      <Label fx:id="highScore" layoutX="234.0" layoutY="37.0" text="HIGH SCORE" textFill="#c9c9c9">
          <font>
             <Font name="Comic Sans MS" size="52.0" />
          </font>
